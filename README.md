@@ -34,15 +34,15 @@ select user,host from user;
 Para criar usuário.
 
 ```sql
-CREATE USER 'jedi'@'localhost' IDENTIFIED WITH mysql_native_password BY 'jedi123123@';
+CREATE USER 'ilton'@'localhost' IDENTIFIED WITH mysql_native_password BY 'ilton123123@';
 ```
 
 3 - Nessa etapa vamos aplicar as permissões de acesso para esse usuario que criamos. O que ele pode fazer no banco de dados. Nesse caso eu coloquei todos os direitos. 
 
 ```sql
-GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,CREATE TEMPORARY TABLES,DROP,INDEX,ALTER ON saturno.* TO 'jedi'@'localhost';
+GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,CREATE TEMPORARY TABLES,DROP,INDEX,ALTER ON saturno.* TO 'ilton'@'localhost';
 ou
-GRANT ALL PRIVILEGES ON saturno.* TO 'jedi'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON saturno.* TO 'ilton'@'localhost' WITH GRANT OPTION;
 ```
 
 **é praticamente isso**, ai para usar esse banco de dados nas suas aplicações Django. Basta colocar essas configuraçoes.  
